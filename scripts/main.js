@@ -63,8 +63,14 @@ console.log(item.title, "costs £", item.price);
 // Magnetic Wall Mount Bottle Opener Barware Set - Stainless Steel or Black - Personalized if you like! is made of wood.
 // Engraved Pocket Knife, Personalized Groomsmen Gift, Ring Bearer Gift, Graduation Gift, 4 Knives is made of wood.
 
+const materialType  = items.filter(function(item) {
+    return item.materials.includes ('wood');
+});
+console.log(materialType);
 
-//
+materialType.forEach(function(item) {
+console.log(item.title, "is made of wood");
+});
 
 
 
@@ -72,16 +78,28 @@ console.log(item.title, "costs £", item.price);
 // 5. Show me how to find which items are made of eight or more materials. 
 //    Please console.log the ones you find.
 
-//
+const materialLength  = items.filter(function(item) {
+    return item.materials.length >= 8;
+});
+console.log(materialLength);
+
+materialLength.forEach(function(item) {
+console.log(item.title, "has", item.materials.length, "materials", item.materials);
+});
 
 
 
 
 // 6. Show me how to calculate how many items were made by their sellers. 
 //    Please console.log your answer.
-// 18 were made by their sellers
 
-//
+
+const seller  = items.filter(function(item) {
+    return item.who_made === "i_did";
+});
+console.log(`${seller.length} were made by their sellers`);
+
+
 
 
 

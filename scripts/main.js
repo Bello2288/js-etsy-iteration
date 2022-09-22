@@ -98,6 +98,7 @@ const seller  = items.filter(function(item) {
     return item.who_made === "i_did";
 });
 console.log(`${seller.length} were made by their sellers`);
+// `The average price is ${average.toFixed(2)}`
 
 
 
